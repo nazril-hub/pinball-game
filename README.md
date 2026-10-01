@@ -1,4 +1,4 @@
-﻿# ðŸŽ¯ BOLA MASA DEPAN â€” Arcade Pinball BK
+# ðŸŽ¯ BOLA MASA DEPAN â€” Arcade Pinball BK
 
 > **Media Bimbingan & Konseling Interaktif Berbasis Gamifikasi Arcade Pinball**  
 > *"Putar bolanya, temukan arahnya, tentukan langkahnya."*  
@@ -9,7 +9,7 @@
 ## ðŸ•¹ï¸ Fitur Utama
 
 1. **Arcade Pinball Physics Engine**:
-   - Simulasi fisika 2D (kecepatan, pantulan bumper bersuara visual, pasak logam/pegs, lorong peluncur/chute dengan pegas dinamis).
+   - Simulasi fisika 2D (kecepatan, pantulan bumper interaktif, pasak logam/pegs, lorong peluncur/chute dengan pegas dinamis).
    - Pengatur daya peluncur bola (*Launch Force*) dengan tombol Spasi atau tombol luncur.
 2. **5 Zona Eksplorasi Bimbingan Konseling**:
    - **Zona 01 â€” Kenali Aku** (Mengenali diri, potensi, bakat autentik).
@@ -31,34 +31,35 @@
 
 ## ðŸ”’ Proteksi Logika & Keamanan (Logic Protection)
 
-- **Bundle Terenkripsi**: Seluruh data zona, kartu misi, panduan konseling, dan algoritma fisika arcade pinball telah dienkripsi menggunakan *Base64 string table* dan diobfuskasi ke dalam `assets/app.min.js`.
-- **Pembersihan File Sumber**: File mentah (`pinball.html` dan `backup_dev/`) secara otomatis diabaikan oleh `.gitignore` sehingga tidak akan terekspos ke repositori GitHub.
+- **Bundle Terenkripsi**: Seluruh data zona, kartu misi, panduan konseling, dan algoritma fisika arcade pinball telah dienkripsi menggunakan *Base64 string table* dan diobfuskasi ke dalam [`assets/app.min.js`](assets/app.min.js).
+- **Pembersihan File Sumber**: File mentah (`pinball.html` dan `backup_dev/`) secara otomatis diabaikan oleh [`.gitignore`](.gitignore) sehingga tidak akan terekspos ke repositori GitHub.
 
 ---
 
 ## ðŸš€ Panduan Push ke GitHub & Deploy ke Vercel
 
-### Langkah 1: Push ke GitHub
-
-Buka terminal di folder project ini:
-
+### Repository GitHub
+Repository ini terhubung ke:
 ```bash
-git remote add origin https://github.com/USERNAME_ANDA/pinball-project.git
-git branch -M main
-git push -u origin main
+https://github.com/nazril-hub/pinball-game.git
 ```
 
-*(Ganti `USERNAME_ANDA` dengan username GitHub Anda).*
+Untuk memperbarui repository:
+```bash
+git add .
+git commit -m "update: README and documentation"
+git push origin main
+```
 
 ---
 
-### Langkah 2: Deploy ke Vercel
+### Deploy ke Vercel
 
-1. Buka [vercel.com](https://vercel.com) dan login.
+1. Buka [vercel.com](https://vercel.com) dan login dengan akun GitHub Anda.
 2. Klik **Add New...** â†’ **Project**.
-3. Pilih repository `pinball-project`.
+3. Pilih repository **`pinball-game`**.
 4. Pilih Framework Preset: **Other**.
-5. Klik **Deploy**.
+5. Klik **Deploy**. Aplikasi akan langsung online dalam beberapa detik!
 
 ---
 
@@ -74,3 +75,9 @@ pinball_project/
 â”‚   â””â”€â”€ app.min.js          # Bundle logika & engine pinball terenkripsi
 â””â”€â”€ backup_dev/             # (Lokal) Backup file sumber mentah
 ```
+
+---
+
+## ðŸ› ï¸ Penggunaan Lokal
+
+Cukup buka file `index.html` langsung di browser, atau jalankan menggunakan Live Server di VS Code. Seluruh fitur (simulasi fisika canvas, audio effects, timer, confetti, dan penyimpanan lokal) berjalan 100% di browser tanpa ketergantungan server/database eksternal.
