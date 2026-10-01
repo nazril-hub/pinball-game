@@ -50,7 +50,7 @@ Untuk memperbarui repository:
 
 ```bash
 git add .
-git commit -m "update: README and documentation"
+git commit -m "update: project files"
 git push origin main
 ```
 
@@ -62,7 +62,7 @@ git push origin main
 2. Klik **Add New...** → **Project**.
 3. Pilih repository **`pinball-game`**.
 4. Pilih Framework Preset: **Other**.
-5. Klik **Deploy**. Aplikasi akan langsung online dalam beberapa detik!
+5. Klik **Deploy**. Aplikasi langsung online dalam beberapa detik!
 
 ---
 
@@ -71,7 +71,6 @@ git push origin main
 ```
 pinball_project/
 ├── .gitignore              # Memfilter file mentah / source code asli
-├── vercel.json             # Konfigurasi deployment & security headers Vercel
 ├── index.html              # Entry point produksi (Vercel ready)
 ├── README.md               # Dokumentasi project & deployment
 ├── assets/
