@@ -1,0 +1,21 @@
+﻿# Sensitive Source Code & Developer Backups
+pinball.html
+backup_dev/
+*.dev.*
+build_obfuscated.ps1
+
+# Operating System & Editor Files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+.vscode/
+.idea/
+
+# Environment Variables
+.env
+.env.*
+
+# Vercel Cache & Local Project Output
+.vercel
+dist/
